@@ -105,3 +105,46 @@ nav a[aria-current="page"]{
 }
  
 .btn-secondary:hover{border-color:var(--olive-dark);}
+
+.hero{
+  padding:96px 0 88px;
+  border-bottom:1px solid var(--line);
+}
+ 
+.hero .wrap{
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  gap:64px;
+  align-items:center;
+}
+ 
+.hero h1{
+  font-size:56px;
+  line-height:1.08;
+  max-width:11ch;
+}
+ 
+.hero p.lede{
+  margin:22px 0 32px;
+  font-size:18px;
+  max-width:42ch;
+  color:#4A4536;
+}
+ 
+.hero-art{
+  aspect-ratio:4/5;
+  background:var(--olive);
+  border-radius:2px;
+  position:relative;
+  overflow:hidden;
+}
+ 
+.hero-art::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 30% 25%, var(--mustard) 0 90px, transparent 91px),
+    radial-gradient(circle at 78% 60%, #8A9A5B 0 60px, transparent 61px);
+  opacity:0.9;
+}
